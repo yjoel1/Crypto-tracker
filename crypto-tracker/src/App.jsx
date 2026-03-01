@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import CryptoList from "./components/CryptoList";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,10 +22,15 @@ function App() {
       });
   }, []);
 
+  const filteredCoins = coins.filter((coin) =>
+    coin.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div>
       <h1>Crypto Tracker</h1>
-      {loading ? <p>Loading...</p> : <CryptoList coins={coins} />}
+      <SearchBar search={search} setSearch={setSearch} />
+      {loading ? <p>Loading...</p> : <CryptoList coins={filteredCoins} />}
     </div>
   );
 }
