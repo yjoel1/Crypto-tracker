@@ -1,8 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import cryptoReducer from "./cryptoSlice";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
 
-export const store = configureStore({
-  reducer: {
-    crypto: cryptoReducer,
-  },
-});
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
