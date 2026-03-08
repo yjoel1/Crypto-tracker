@@ -27,7 +27,7 @@ function App() {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "#0a0a0f",
+      background: "#41a5ac",
       fontFamily: "'Courier New', monospace",
       color: "#e0e0e0",
       padding: "40px 20px",
@@ -40,7 +40,7 @@ function App() {
         backgroundSize: "40px 40px",
       }} />
 
-      <div style={{ position: "relative", zIndex: 1, maxWidth: "700px", margin: "0 auto" }}>
+      <div style={{ position: "relative", zIndex: 1, maxWidth: "1400px", margin: "0 auto" }}>
         {/* Header */}
         <div style={{ marginBottom: "36px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px" }}>
